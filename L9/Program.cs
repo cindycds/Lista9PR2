@@ -81,7 +81,22 @@ namespace Lista8PR2
 
         public static void Exercicio4()
         {
+            float div5=0, di
+            Console.WriteLine("entre com o tamanho do seu vetor:");
+            int num = int.Parse(Console.ReadLine());
+            int[] vetor = new int[num];
+            for (int i = 0; i < num; i++)
+            {
+                Console.WriteLine("Entre com o valor:");
+                vetor[i] = int.Parse(Console.ReadLine());
+                if (i % 2 == 0)
+                    par += vetor[i];
+                else
+                    impar += vetor[i];
 
+            }
+            Console.WriteLine("soma par:" + par);
+            Console.WriteLine(" soma impar:" + impar);
 
 
 
