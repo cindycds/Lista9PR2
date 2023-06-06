@@ -69,7 +69,7 @@ namespace Lista8PR2
                 Console.WriteLine("vetor[{0}]={1}", i, vetor[i]);
             }
             
-            for(int i = 0; i < num; i--)
+            for(int i = num; i == 0; i--)
             {
                 Console.WriteLine("vetor[{0}]={1}", i, vetor[i]);// VOLTAR nela
             }
@@ -81,23 +81,29 @@ namespace Lista8PR2
 
         public static void Exercicio4()
         {
-            float div5=0, di
+            int div, media=0, soma=0;
             Console.WriteLine("entre com o tamanho do seu vetor:");
             int num = int.Parse(Console.ReadLine());
             int[] vetor = new int[num];
             for (int i = 0; i < num; i++)
             {
+                
                 Console.WriteLine("Entre com o valor:");
                 vetor[i] = int.Parse(Console.ReadLine());
-                if (i % 2 == 0)
-                    par += vetor[i];
-                else
-                    impar += vetor[i];
+                soma = +vetor[i];
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    media = soma/num;
+                }
+                    for (int j = 0; j < num; j++)
+                    {
+                        Console.WriteLine("vetor[{0}]={1}", j, vetor[j]);
+                    }
+
 
             }
-            Console.WriteLine("soma par:" + par);
-            Console.WriteLine(" soma impar:" + impar);
-
+            Console.WriteLine("media: " + media);
+            
 
 
 
