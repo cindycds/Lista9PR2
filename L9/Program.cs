@@ -69,7 +69,7 @@ namespace Lista8PR2
                 Console.WriteLine("vetor[{0}]={1}", i, vetor[i]);
             }
             
-            for(int i = num; i == 0; i--)
+            for(int i = num-1; i >= 0; i--)
             {
                 Console.WriteLine("vetor[{0}]={1}", i, vetor[i]);// VOLTAR nela
             }
@@ -81,30 +81,35 @@ namespace Lista8PR2
 
         public static void Exercicio4()
         {
-            int div, media=0, soma=0;
+            int conte=0, media=0, soma=0;
             Console.WriteLine("entre com o tamanho do seu vetor:");
             int num = int.Parse(Console.ReadLine());
             int[] vetor = new int[num];
+            Random random = new Random();
             for (int i = 0; i < num; i++)
             {
                 
-                Console.WriteLine("Entre com o valor:");
-                vetor[i] = int.Parse(Console.ReadLine());
-                soma = +vetor[i];
+               // Console.WriteLine("Entre com o valor:");
+                vetor[i] = random.Next(1,50); //mu,meros aleatorios
+               // vetor[i] = int.Parse(Console.ReadLine());
+                
                 if (i % 3 == 0 && i % 5 == 0)
                 {
-                    media = soma/num;
+                    conte++;
+                    soma += vetor[i];
+                    Console.WriteLine("numeros div:"+ vetor[i]);
                 }
-                    for (int j = 0; j < num; j++)
-                    {
-                        Console.WriteLine("vetor[{0}]={1}", j, vetor[j]);
-                    }
+                    
 
 
             }
+            media = soma / conte;
             Console.WriteLine("media: " + media);
-            
 
+            for (int j = 0; j < num; j++)
+            {
+                Console.WriteLine("vetor[{0}]={1}", j, vetor[j]);
+            }
 
 
         }
